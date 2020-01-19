@@ -64,4 +64,67 @@ console.log([] + []); // array + array == empty line
 console.log([] + {}); // array/object + array/object == Object object
 console.log(10 == 10); // true comparing
 console.log('10' == 10); // true
-console.log('10' === 10); // false comparing by the type firstly
+console.log('10' === 10); // false  comparing by the type firstly
+
+console.log('empty string', '' == true);
+console.log('something in string', '1' == true);
+
+console.log(15 % 2, 15 % 5); // Module (the rest from the /)
+
+const year2018 = 2018;
+console.log(year2018 % 2000);
+
+console.log(!true == false); // true
+console.log(!!false == false); // ture
+
+console.log(!0); // ture
+
+console.log(!''); // true
+console.log(!' '); // false 
+
+console.log(Math.pow(2, 6)); //64  vvedenie v stepen`
+console.log(2 ** 6); // 64 vvedenie v stepen`
+
+console.log(Math.round(4.3, 4.5)); //4.3 = 4 rounding as in math
+console.log(Math.round(4.5)); // 5 rounding as in math
+console.log(Math.floor(6.9)); // 6 rounding to lower
+console.log(Math.abs(-10)); // 10 remove -
+console.log(Math.max(1, 2, 25, 100, -250)); // 100 showing max number in raw
+
+const myMaxArray = [1, 2, 25, 100, -1, Infinity]; //NAN dont understand array need switch to numbers
+console.log(Math.max(...myMaxArray)); // infinity ... needs to switch array to numbers
+
+console.log();
+
+var userAge = 33;
+var userName = 'Andrew';
+var usersSkills = ['what', 23];
+var car = undefined;
+const user = {};
+
+console.log(typeof userAge);
+console.log(typeof userName);
+console.log('isArray?', Array.isArray(usersSkills));
+console.log(typeof car);
+console.log(typeof user);
+console.log(typeof NaN); // number :)
+////
+
+const student = {
+    skills: ['JS', 'React'],
+    salary: '2000$',
+}
+
+console.log(student);
+
+student.salary = '3000$';
+student['offers'] = ['facebook, google'];
+ 
+console.log(student);
+
+console.log();
+
+
+
+
+
