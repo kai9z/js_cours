@@ -4,12 +4,15 @@
 // alert('Hello'); // ничего не возвращает
 // prompt('sup', 'dude')
 // confirm('yes no?');
-
-//const userNumber1 = prompt('Put first number here:');
-//const userNumber2 = prompt('Put second number here:');
-
+let a 
+const userNumber1 = prompt('Put first number here:');
+//const userNumber2 = +prompt('Put second number here:');
+if (userNumber1 == NaN) {
+    alert("hi")
+}
+console.log(a);
+//
 //alert(`'Your number is: ', ${+userNumber1 + +userNumber2}`);
-
 // Logical operations
 /*
 if(10 == 100) {
@@ -35,6 +38,7 @@ if (number1 > 150) {
     console.log('Italy')
 }
 */
+/*
 const testString = 'fuck';
 if (10 == 20) {
     console.log('not an oprtion')
@@ -46,3 +50,4 @@ if (10 == 20) {
         console.log('you win')
     }
 }
+*/
