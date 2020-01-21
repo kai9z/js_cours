@@ -46,17 +46,16 @@ if (10 == 20) {
 
 /* TASK */
 
-const userNumber1 = +prompt('Enter number 1');
+let userNumber1 = +prompt('Enter number 1');
 
 if (isNaN(userNumber1)) {
     alert('Enter number only');
 
-    const userNumber1 = +prompt('Enter number 1')
-    const userNumber2 = +prompt('Enter number 2')
+    let userNumber1 = +prompt('Enter number 1')
+    let userNumber2 = +prompt('Enter number 2')
     alert(`'Your number is: ', ${+userNumber1 + +userNumber2}`);
     
 } else {
     const userNumber2 = +prompt('Enter number 2')
     alert(`'Your number is: ', ${+userNumber1 + +userNumber2}`);
 }
-
