@@ -4,15 +4,7 @@
 // alert('Hello'); // ничего не возвращает
 // prompt('sup', 'dude')
 // confirm('yes no?');
-let a 
-const userNumber1 = prompt('Put first number here:');
-//const userNumber2 = +prompt('Put second number here:');
-if (userNumber1 == NaN) {
-    alert("hi")
-}
-console.log(a);
-//
-//alert(`'Your number is: ', ${+userNumber1 + +userNumber2}`);
+
 // Logical operations
 /*
 if(10 == 100) {
@@ -51,3 +43,20 @@ if (10 == 20) {
     }
 }
 */
+
+/* TASK */
+
+const userNumber1 = +prompt('Enter number 1');
+
+if (isNaN(userNumber1)) {
+    alert('Enter number only');
+
+    const userNumber1 = +prompt('Enter number 1')
+    const userNumber2 = +prompt('Enter number 2')
+    alert(`'Your number is: ', ${+userNumber1 + +userNumber2}`);
+    
+} else {
+    const userNumber2 = +prompt('Enter number 2')
+    alert(`'Your number is: ', ${+userNumber1 + +userNumber2}`);
+}
+
