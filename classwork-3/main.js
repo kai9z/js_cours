@@ -87,7 +87,49 @@ function showNumber(supboi) {
 showNumber(3);
 
 function multiplyNumber2(sup2) {
-    let a = sup2 * 2;
-    console.log(a);
+    console.log(sup2 * 2);
+    return sup2 * 2;
 }
-multiplyNumber2(3);
+
+const myNumber = multiplyNumber2(10);
+
+console.log(myNumber);
+
+function greeting(name) {
+    const hello = `Greeting, ${name}!`;
+    return hello;
+}
+const helloName = greeting('Andrew');
+console.log(helloName);
+
+// If function not returning anything its called PROCEDURA
+// Function - returning smth
+
+/*
+function checkNum() {
+    var forNum = +prompt('enter number')
+
+    if (isNaN(forNum)) {
+        alert('you entered NaN');
+        return forNum = checkNum();
+        // recursia
+    }  
+    return forNum;
+} 
+
+const check = checkNum();
+console.log(check);
+*/
+
+function sumMy(first, second) {
+    return first + second;
+}
+console.log(sumMy(1, 2));
+
+a = {
+    name: 'andrew',
+}
+function obj(a) {
+    return 'privet', a
+}
+console.log(obj(a));
