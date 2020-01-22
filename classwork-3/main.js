@@ -45,7 +45,7 @@ if (10 == 20) {
 */
 
 /* TASK */
-
+/*
 let userNumber1 = +prompt('Enter number 1');
 
 if (isNaN(userNumber1)) {
@@ -59,3 +59,35 @@ if (isNaN(userNumber1)) {
     const userNumber2 = +prompt('Enter number 2')
     alert(`'Your number is: ', ${+userNumber1 + +userNumber2}`);
 }
+*/
+// MACHINA SOSTOIANI 
+// BANKOMAT
+// function
+
+
+function show3Numbers() {
+    console.log(1)
+    console.log(2)
+    console.log(3)
+}
+console.log('sobiraus v magaz');
+show3Numbers();
+
+function helloToUser(userName) {
+    console.log('Privet username: ', userName)
+}
+
+helloToUser('Bazual');
+
+console.log('________________________________');
+
+function showNumber(supboi) {
+    console.log(supboi)
+}
+showNumber(3);
+
+function multiplyNumber2(sup2) {
+    let a = sup2 * 2;
+    console.log(a);
+}
+multiplyNumber2(3);
