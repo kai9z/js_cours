@@ -123,19 +123,14 @@ function argArray(mass) {
     } else if ((typeof mass[0]) == 'string' || (typeof mass[0] == 'object')) {
         return (mass[0])
     } else {
-        return false;
+        return "NANI?";
     }
 
 }
-const randomgArr = [NaN, 41, 2, 3]
+const randomgArr = [1, 41, 2, 3]
+
 //console.log(randomgArr)
 console.log(argArray(randomgArr));
-
-if (isNaN(randomgArr[0]) == false){
-    console.log('hiii')
-} else {
-    'Nan???'
-}
 
 /*
 a = Array.isArray(randomgArr)
