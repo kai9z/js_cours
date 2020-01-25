@@ -165,10 +165,12 @@ console.log(arr);
 
 function addToArray(arrayActually, newElement) {
     // Меряем длинну массива
-    arrLangh = arrayActually.length;
+    //arrLangh = arrayActually.length;
     // так как елементы массива с 0 то елементов на 1 больше
     // следовательно последняя позиция и будет новый елемент
-    arrayActually[arrLangh] = newElement
+    //arrayActually[arrLangh] = newElement
+    arrayActually[arrayActually.length] = newElement
+    
     return arrayActually
 }
 
@@ -192,12 +194,10 @@ const testPerson = {
 
 function forThreeArgs(one, two, three){
     newObject = {
-        one: two,
+        [one]: two,
     }
-    if (three == three['name']){
-        newObject = {
-            addName: three['name']
-        }
+    if (three.name){
+        newObject.name = three.name;
     }
     return newObject
 };
