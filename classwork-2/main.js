@@ -1,4 +1,4 @@
-/* STRINGS
+/*STRINGS
 const oldString = "old 'string'";
 const commonString = 'common string';
 

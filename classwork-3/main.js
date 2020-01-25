@@ -64,7 +64,7 @@ if (isNaN(userNumber1)) {
 // BANKOMAT
 // function
 
-
+/*
 function show3Numbers() {
     console.log(1)
     console.log(2)
@@ -94,13 +94,8 @@ function multiplyNumber2(sup2) {
 const myNumber = multiplyNumber2(10);
 
 console.log(myNumber);
+*/
 
-function greeting(name) {
-    const hello = `Greeting, ${name}!`;
-    return hello;
-}
-const helloName = greeting('Andrew');
-console.log(helloName);
 
 // If function not returning anything its called PROCEDURA
 // Function - returning smth
@@ -119,17 +114,112 @@ function checkNum() {
 
 const check = checkNum();
 console.log(check);
-*/
+
 
 function sumMy(first, second) {
     return first + second;
 }
 console.log(sumMy(1, 2));
 
-a = {
-    name: 'andrew',
+function greeting(name) {
+    const hello = `Greeting, ${name}!`;
+    return hello;
 }
-function obj(a) {
-    return 'privet', a
+const helloName = greeting('Andrew');
+console.log(helloName);
+*/
+
+// First Done
+ function nameFunction(a) {
+    const person = {
+        name: a,
+        lastName: 'william',
+    }
+    return 'privet', person
 }
-console.log(obj(a));
+console.log(nameFunction('andrew'));
+
+// 2 Done
+let objName = {
+    name: 'done',
+    stat: 1
+};
+console.log (objName);
+
+function allToUp(a) {
+    takeFirstSvoisvto = a['name']
+    makeItUpperCase = takeFirstSvoisvto.toUpperCase();
+    const nameToUp = {
+        name: makeItUpperCase,
+        stat: 2
+    } 
+    return nameToUp
+}
+console.log(allToUp(objName))
+
+// 3 done
+let arr = ['s', 'u', 'c', 'k', 100];
+arr[5] = 'opa';
+q = 'ai dir dir dri dri die';
+console.log(arr);
+
+function addToArray(arrayActually, newElement) {
+    // Меряем длинну массива
+    arrLangh = arrayActually.length;
+    // так как елементы массива с 0 то елементов на 1 больше
+    // следовательно последняя позиция и будет новый елемент
+    arrayActually[arrLangh] = newElement
+    return arrayActually
+}
+
+console.log(addToArray(arr, q))
+
+// 4 
+function paramsTypes(a,b,c) {
+    aType = typeof(a);
+    bType = typeof(b);
+    cType = typeof(c);
+    reuslt = [aType, bType, cType]
+    return reuslt;
+}
+
+console.log(paramsTypes(('test'),{name}, true))
+
+// 5
+const testPerson = {
+    name: 'vasia'
+}
+
+function forThreeArgs(one, two, three){
+    newObject = {
+        one: two,
+    }
+    if (three == three['name']){
+        newObject = {
+            addName: three['name']
+        }
+    }
+    return newObject
+};
+
+
+
+console.log(forThreeArgs('My name is', "Skirlix:D", testPerson))
+
+function hardMode(one) {
+    if ((one % 3) == 0){
+        if ((one % 5) == 0) {
+            return 'FIzzBuzz'
+        }
+    } else if ((one % 3) == 0){
+        return 'Fizz'    
+    } else {
+        if ((one % 5) == 0){
+            return 'Buzz'
+        } else {
+            return one
+        }
+    }
+}
+
+console.log(hardMode(6))
