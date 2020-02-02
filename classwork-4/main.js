@@ -186,10 +186,46 @@
 //     num2++;
 // } 
 
-сconst array = [
-    'JavaScript Ninja',
-    'Clean Code ch.3',
-    'JavaScript Good parts',
-    'eloquent JavaScript'
-]
+// const array = [
+//     'JavaScript Ninja',
+//     'Clean Code ch.3',
+//     'JavaScript Good parts',
+//     'eloquent JavaScript',
+// ];
 
+// for (let i = 0; i < array.length; i++) {
+//     const elem = array[i];
+//     console.log(`${i+1} book name:`, elem);    
+// }
+
+// Here is the object
+const webStore = {
+    // this object has another object
+    category: {
+        // That contains diff Arrays
+        pc: ['WindowsPC', 'RandomPC'],
+        noteBook: ['Asus', 'Lenovo', 'Dell'],
+        mobile: ['Nokia', 'Apple'],
+        
+    }
+}
+// To display Name of the category And what Cat (Array contains)
+function showWebStore(content) {
+    // First - simple access to object inside object
+    const category = content.category
+    // our "KEY" checking FIRST element (PC ins our case)
+    for (key in category){
+        console.log(`Category: ${key}`)
+        // And display CATEGORY : PC
+        for (i = 0; i < category[key].length; i++){
+            // now we go inside 1 elem of object PC
+            // that is Array and wee need to dispaly each element of this Array
+            // our 'i' will be moving 'category[key].length' time to take care about all elemets of array
+            const elem = category[key][i];
+            // and display each element 'elem' category[key]↑[i](0,1,2...)
+            console.log(`    Content of category: ${elem}`)
+        }
+    }
+}
+
+showWebStore(webStore);
