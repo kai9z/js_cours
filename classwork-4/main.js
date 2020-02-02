@@ -230,4 +230,22 @@ function showWebStore(content) {
 
 showWebStore(webStore);
 
-//
+// HomeWork:
+
+// task 1 - done
+function returnArg(arg) {
+    if (typeof(arg) == "object" || typeof(arg) == "number") {
+        console.log(true);
+    } else if (typeof(arg) == "function"){
+        console.log(false)
+    } else {
+        let result = (typeof(arg) == "string" && arg.length < 10) ? `your string length is ${arg}` : "you win"
+        return console.log(result)
+    }
+}
+
+k = function(){
+    return 'hi'
+}
+
+returnArg('qwerqwerqwerqwer');
