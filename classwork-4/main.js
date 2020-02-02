@@ -280,27 +280,41 @@ console.log("")
 // task 3 (Refactoring)
 console.log("task 3")
 
-function fizzBuzz(num) {
-    let str = ''
-    for (i = 0; i <= num; i++) {
-        if (i % 3 == 0) {
-            str = str + "Fizz";
-            console.log(str);
-            str = ''
-        }
+// function fizzBuzz(num) {
+//     let str = ''
+//     for (i = 0; i <= num; i++) {
+//         if (i % 3 == 0) {
+//             str = str + "Fizz";
+//             console.log(str);
+//             str = ''
+//         }
 
-        if (i % 5 == 0) {
-            str = str + "Buzz";
-            console.log(str);
-            str = ''
-        }
+//         if (i % 5 == 0) {
+//             str = str + "Buzz";
+//             console.log(str);
+//             str = ''
+//         }
 
-        if (i % 3 == 0 && i % 5 == 0) {
-            str = str + "FizzBuzz";
-            console.log(str);
-            str = ''
-        }   
+//         if (i % 3 == 0 && i % 5 == 0) {
+//             str = str + "FizzBuzz";
+//             console.log(str);
+//             str = ''
+//         }   
+//     }
+// }
+
+// fizzBuzz(100)
+
+console.log('')
+// task 4 
+console.log(" Task 4")
+
+function typesOf(somArr) {
+    let mass = []
+    for (i = 0; i <= somArr.length-1; i++){
+        mass[i] = typeof(somArr[i]);
     }
+    console.log(mass)
 }
+typesOf([1,4,5,'str'])
 
-fizzBuzz(100)
