@@ -318,3 +318,46 @@ function typesOf(somArr) {
 }
 typesOf([1,4,5,'str'])
 
+console.log('')
+// task SUPER
+console.log(" Task Super")
+
+let objArray = [
+    firstObj = {
+        age: 23,
+        sup: 'dud'
+    },
+    secondObj = {
+        age: 15,
+    },
+    anotherOjb = {
+        age: 'fuck'
+    },
+    nanoObj = {
+        age: NaN,
+    }
+];
+
+function makeAge(thisArray) {
+    for (i = 0; i < thisArray.length; i++) {
+        if (isNaN(thisArray[i].age )) {
+            thisArray[i].unkAge = true;
+        } 
+    }
+    return thisArray;
+}   
+
+makeAge(objArray)
+console.log(objArray)
+
+function onlyTrue(newArray) {
+    onlyTrueArray = [];
+    for (i in newArray) {
+        if (newArray[i].unkAge) {
+            onlyTrueArray[i] = newArray[i]
+        }
+    } 
+    console.log(onlyTrueArray)
+};
+
+onlyTrue(objArray);
