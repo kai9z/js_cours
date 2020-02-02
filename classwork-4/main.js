@@ -231,8 +231,10 @@ function showWebStore(content) {
 showWebStore(webStore);
 
 // HomeWork:
-
+console.log("")
 // task 1 - done
+console.log("task 1")
+
 function returnArg(arg) {
     if (typeof(arg) == "object" || typeof(arg) == "number") {
         console.log(true);
@@ -249,3 +251,27 @@ k = function(){
 }
 
 returnArg('qwerqwerqwerqwer');
+
+console.log("")
+//task 2
+console.log("task 2")
+
+function rawArray(num1, num2) {
+    let emptyArray = [];
+    if (num1 < num2) {
+        const a = num2 - num1;
+        for (i = 0; i <= a; i++) {
+            //console.log(i+num1)
+            emptyArray[i] = i + num1
+        }
+    } else {
+        const a = num1 - num2;
+        for (i = 0; i <= a; i++) {
+            //console.log(num1 - i)
+            emptyArray[i] = num1 - i;
+        }
+    }
+    console.log(emptyArray)
+}
+
+rawArray(15, 10)
