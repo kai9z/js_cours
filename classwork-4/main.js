@@ -274,4 +274,33 @@ function rawArray(num1, num2) {
     console.log(emptyArray)
 }
 
-rawArray(15, 10)
+rawArray(15, 10);
+
+console.log("")
+// task 3 (Refactoring)
+console.log("task 3")
+
+function fizzBuzz(num) {
+    let str = ''
+    for (i = 0; i <= num; i++) {
+        if (i % 3 == 0) {
+            str = str + "Fizz";
+            console.log(str);
+            str = ''
+        }
+
+        if (i % 5 == 0) {
+            str = str + "Buzz";
+            console.log(str);
+            str = ''
+        }
+
+        if (i % 3 == 0 && i % 5 == 0) {
+            str = str + "FizzBuzz";
+            console.log(str);
+            str = ''
+        }   
+    }
+}
+
+fizzBuzz(100)
