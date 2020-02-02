@@ -214,7 +214,7 @@ function showWebStore(content) {
     // First - simple access to object inside object
     const category = content.category
     // our "KEY" checking FIRST element (PC ins our case)
-    for (key in category){
+    for (let key in category){
         console.log(`Category: ${key}`)
         // And display CATEGORY : PC
         for (i = 0; i < category[key].length; i++){
