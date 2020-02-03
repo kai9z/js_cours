@@ -339,9 +339,10 @@ let objArray = [
 ];
 
 function makeAge(thisArray) {
-    for (i = 0; i < thisArray.length; i++) {
-        if (isNaN(thisArray[i].age )) {
-            thisArray[i].unkAge = true;
+    for (let i = 0; i < thisArray.length; i++) {
+        const elem = thisArray[i];
+        if (isNaN(elem.age )) {
+            elem.unkAge = true;
         } 
     }
     return thisArray;
