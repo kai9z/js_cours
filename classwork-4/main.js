@@ -337,28 +337,19 @@ let objArray = [
         age: NaN,
     }
 ];
-
+const onlyTrueArray = [];
 function makeAge(thisArray) {
+    //const onlyTrueArray = [];
     for (let i = 0; i < thisArray.length; i++) {
         const elem = thisArray[i];
         if (isNaN(elem.age )) {
             elem.unkAge = true;
+            onlyTrueArray[onlyTrueArray.length] = elem
         } 
     }
-    return thisArray;
+    return onlyTrueArray;
 }   
 
-makeAge(objArray)
+console.log(makeAge(objArray))
 console.log(objArray)
-
-function onlyTrue(newArray) {
-    onlyTrueArray = [];
-    for (i in newArray) {
-        if (newArray[i].unkAge) {
-            onlyTrueArray[i] = newArray[i]
-        }
-    } 
-    console.log(onlyTrueArray)
-};
-
-onlyTrue(objArray);
+console.log(onlyTrueArray)
