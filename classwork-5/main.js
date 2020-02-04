@@ -9,16 +9,16 @@ let user = {
     ],
 };
 
-function showUser(userObj) {
+function showUserFriends(userObj) {
     const userName = user.name;
     console.log(`${userName}'s friends:`)
     const userFriends = Object.values(user.friends);
     for (i in userFriends) {
-        elem = userFriends[i]
-        if (!elem.birthday) {
+        friend = userFriends[i]
+        if (!friend.birthday) {
             continue
         }
-        console.log(`${elem.name} | Birthday: ${elem.birthday}`)
+        console.log(`${friend.name} | Birthday: ${friend.birthday}`)
     }       
 }
-showUser(user);
+showUserFriends(user);
