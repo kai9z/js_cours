@@ -1,30 +1,30 @@
-// let user = {
-//     name: 'Andrew',
-//     birthday: '23',
-//     friends: [
-//         { name: 'Seriy', birthday: '20.01.1996' },
-//         { name: 'Toha', birthday: '08.2.1998' },
-//         { name: 'danila', birthday: undefined },
-//         { name: 'random', birthday: '03.12.1765' },
-//     ],
-// };
+let user = {
+    name: 'Andrew',
+    birthday: '23',
+    friends: [
+        { name: 'Seriy', birthday: '20.01.1996' },
+        { name: 'Toha', birthday: '08.2.1998' },
+        { name: 'danila', birthday: undefined },
+        { name: 'random', birthday: '03.12.1765' },
+    ],
+};
 
-// function showUserFriends(userObj) {
-//     const userName = user.name;
-//     console.log(`${userName}'s friends:`)
-//     const userFriends = Object.values(user.friends);
-//     for (i in userFriends) {
-//         friend = userFriends[i]
-//         if (!friend.birthday) {
-//             continue
-//         }
-//         console.log(`${friend.name} | Birthday: ${friend.birthday}`)
-//     }       
-// }
-// showUserFriends(user);
+function showUserFriends(userObj) {
+    const userName = user.name;
+    console.log(`${userName}'s friends:`)
+    const userFriends = Object.values(user.friends);
+    for (i in userFriends) {
+        friend = userFriends[i]
+        if (!friend.birthday) {
+            continue
+        }
+        console.log(`${friend.name} | Birthday: ${friend.birthday}`)
+    }       
+}
+showUserFriends(user);
 
-//
 
+ 
 let someObject = {
     name: 'Test',
     someNumber: 25,
@@ -32,13 +32,15 @@ let someObject = {
     nextArray: [30, 40]
 }
 
-const randomArray = [45, 1, 200, 'text']
+let randomArray = [45, 1, 200, 'text']
 
 function showHightNumber(firstArg, secondArg) {
     if (Array.isArray(firstArg)){
         for (i in firstArg) {
-            if (firstArg[i] > secondArg) {
-                console.log(firstArg[i])
+            const elem = firstArg[i]
+            if (elem > secondArg) {
+                console.log(elem)
+                break
             }
         }
     } else if (typeof(firstArg) == 'object') {
@@ -48,6 +50,7 @@ function showHightNumber(firstArg, secondArg) {
                 for (j in elem[i]) {
                     if (elem[i][j] > secondArg){
                         console.log(elem[i][j])
+                        break
                     }
                 }
             }
