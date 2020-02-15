@@ -1,63 +1,145 @@
-let user = {
-    name: 'Andrew',
-    birthday: '23',
-    friends: [
-        { name: 'Seriy', birthday: '20.01.1996' },
-        { name: 'Toha', birthday: '08.2.1998' },
-        { name: 'danila', birthday: undefined },
-        { name: 'random', birthday: '03.12.1765' },
-    ],
-};
+// let user = {
+//     name: 'Andrew',
+//     birthday: '23',
+//     friends: [
+//         { name: 'Seriy', birthday: '20.01.1996' },
+//         { name: 'Toha', birthday: '08.2.1998' },
+//         { name: 'danila', birthday: undefined },
+//         { name: 'random', birthday: '03.12.1765' },
+//     ],
+// };
 
-function showUserFriends(userObj) {
-    const userName = user.name;
-    console.log(`${userName}'s friends:`)
-    const userFriends = Object.values(user.friends);
-    for (i in userFriends) {
-        friend = userFriends[i]
-        if (!friend.birthday) {
-            continue
-        }
-        console.log(`${friend.name} | Birthday: ${friend.birthday}`)
-    }       
-}
-showUserFriends(user);
+// function showUserFriends(userObj) {
+//     const userName = user.name;
+//     console.log(`${userName}'s friends:`)
+//     const userFriends = Object.values(user.friends);
+//     for (i in userFriends) {
+//         friend = userFriends[i]
+//         if (!friend.birthday) {
+//             continue
+//         }
+//         console.log(`${friend.name} | Birthday: ${friend.birthday}`)
+//     }       
+// }
+// showUserFriends(user);
 
 
  
-let someObject = {
-    name: 'Test',
-    someNumber: 25,
-    someArray: [1, 2, 'test', 25, 50],
-    nextArray: [30, 40]
+// let someObject = {
+//     name: 'Test',
+//     someNumber: 25,
+//     someArray: [1, 2, 'test', 25, 50],
+//     nextArray: [30, 40]
+// }
+
+// let randomArray = [45, 1, 200, 'text']
+
+// function showHightNumber(firstArg, secondArg) {
+//     if (Array.isArray(firstArg)){
+//         findBiggestNumber(firstArg, secondArg)  
+//     } else if (typeof(firstArg) == 'object') {
+//         const key = Object.values(firstArg)
+//         for (i in key) {
+//             const elem = key[i]
+//             if (Array.isArray(elem)) {
+//                 findBiggestNumber(elem, secondArg)
+//             }
+//         }
+//     }
+// }
+
+// function findBiggestNumber(firstArg, secondArg) {
+//     for (i in firstArg) {
+//         const elem = firstArg[i]
+//         if (elem > secondArg) {
+//             console.log(elem)
+//             break
+//         }
+//     }
+// }
+
+// showHightNumber(someObject, 24);
+
+// RECURSIA
+
+// function sum(num) {
+//     let counter = 0;
+//     while (num > 0) {
+//         counter = counter + num;
+//         num = num - 1;
+//     }
+//     return counter;
+// }
+
+// function sumRecursive(num) {
+//     if (num <= 0){
+//         return num;
+//     }
+//     const newNumber = num + sumRecursive(num -1)
+//     return newNumber;
+    
+// }
+
+// console.log(sumRecursive(5))
+// console.log(sum(3));
+
+/* ARRAYS */
+
+const myArray = [1, 2, 3];
+console.log(myArray);
+
+/* 
+ push - add elem in the end of array 
+ and return undefine (nothing)
+*/
+myArray.push(4);
+console.log(myArray);
+
+/* 
+ pop - delete last elem
+ and return it
+*/
+const lastArray = myArray.pop();
+console.log(lastArray);
+console.log(myArray);
+
+/* 
+ shift - delete first elem 
+ and return it
+*/
+const firstElem = myArray.shift();
+console.log(firstElem);
+console.log(myArray); 
+
+/* 
+ unshift - adding 1 elem of array
+ and return length of array
+*/
+const unshift = myArray.unshift(10);
+console.log(unshift); 
+console.log(myArray); 
+
+/*
+ slice - copy of array
+*/
+
+const myArray2 = myArray.slice(0);
+console.log(myArray2); 
+console.log(myArray); 
+
+/*
+ reverse - perevorachivaet array
+*/
+console.log(myArray.reverse());
+
+const myString = 'JavaScript is Awesome';
+
+let reversedString = [];
+for (i in myString) {
+    letter = myString[i]
+    reversedString.push(letter)
 }
+reversedString = reversedString.reverse();
+console.log(reversedString);
+console.log(reversedString.join(''));
 
-let randomArray = [45, 1, 200, 'text']
-
-function showHightNumber(firstArg, secondArg) {
-    if (Array.isArray(firstArg)){
-        for (i in firstArg) {
-            const elem = firstArg[i]
-            if (elem > secondArg) {
-                console.log(elem)
-                break
-            }
-        }
-    } else if (typeof(firstArg) == 'object') {
-        elem = Object.values(firstArg)
-        for (i in elem) {
-            if (Array.isArray(elem[i])) {
-                for (j in elem[i]) {
-                    if (elem[i][j] > secondArg){
-                        console.log(elem[i][j])
-                        break
-                    }
-                }
-            }
-        }
-    }
-}
-
-
-
-showHightNumber(someObject, 24);
