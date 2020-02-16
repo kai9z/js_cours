@@ -85,61 +85,134 @@
 
 /* ARRAYS */
 
-const myArray = [1, 2, 3];
-console.log(myArray);
+// const myArray = [1, 2, 3];
+// console.log(myArray);
 
-/* 
- push - add elem in the end of array 
- and return undefine (nothing)
-*/
-myArray.push(4);
-console.log(myArray);
+// /* 
+//  push - add elem in the end of array 
+//  and return undefine (nothing)
+// */
+// myArray.push(4);
+// console.log(myArray);
 
-/* 
- pop - delete last elem
- and return it
-*/
-const lastArray = myArray.pop();
-console.log(lastArray);
-console.log(myArray);
+// /* 
+//  pop - delete last elem
+//  and return it
+// */
+// const lastArray = myArray.pop();
+// console.log(lastArray);
+// console.log(myArray);
 
-/* 
- shift - delete first elem 
- and return it
-*/
-const firstElem = myArray.shift();
-console.log(firstElem);
-console.log(myArray); 
+// /* 
+//  shift - delete first elem 
+//  and return it
+// */
+// const firstElem = myArray.shift();
+// console.log(firstElem);
+// console.log(myArray); 
 
-/* 
- unshift - adding 1 elem of array
- and return length of array
-*/
-const unshift = myArray.unshift(10);
-console.log(unshift); 
-console.log(myArray); 
+// /* 
+//  unshift - adding 1 elem of array
+//  and return length of array
+// */
+// const unshift = myArray.unshift(10);
+// console.log(unshift); 
+// console.log(myArray); 
 
-/*
- slice - copy of array
-*/
+// /*
+//  slice - copy of array
+// */
 
-const myArray2 = myArray.slice(0);
-console.log(myArray2); 
-console.log(myArray); 
+// const myArray2 = myArray.slice(0);
+// console.log(myArray2); 
+// console.log(myArray); 
 
-/*
- reverse - perevorachivaet array
-*/
-console.log(myArray.reverse());
+// /*
+//  reverse - perevorachivaet array
+// */
+// console.log(myArray.reverse());
 
-const myString = 'JavaScript is Awesome';
+// const myString = 'JavaScript is Awesome';
 
-let reversedString = [];
-for (i in myString) {
-    letter = myString[i]
-    reversedString.push(letter)
+// let reversedString = [];
+// for (i in myString) {
+//     letter = myString[i]
+//     reversedString.push(letter)
+// }
+// reversedString = reversedString.reverse();
+// console.log(reversedString);
+// console.log(reversedString.join(''));
+
+let arr1 = [1, false, 2, 0, 3, null, 0, 4, 0, 25];
+let arr2 = [
+  "a",
+  0,
+  0,
+  "b",
+  null,
+  "c",
+  "d",
+  0,
+  1,
+  false,
+  0,
+  1,
+  0,
+  3,
+  [],
+  0,
+  1,
+  9,
+  0,
+  0,
+  {},
+  0,
+  0,
+  9
+];
+//console.log(arr1)
+function moveToZero(arr) {
+    let arrZero = [];
+    let arrNumo = [];
+
+    for (let i = 0; i < arr.length; i++) {
+        const elem = arr[i];
+        
+        if (elem === 0) {
+            arrZero.push(elem);
+            //console.log(arrZero)
+            continue
+        }
+
+        arrNumo.push(elem)
+        //console.log(arrNumo)
+
+    }
+
+    return arrNumo.concat(arrZero)
+
 }
-reversedString = reversedString.reverse();
-console.log(reversedString);
-console.log(reversedString.join(''));
 
+console.log(moveToZero(arr1));
+let arrNum = [1, 30, 50, 100, 250, 350, 3]
+// 2. Верните сумму двух найменьших чисел в массиве
+// [10,20,30,1,31,11,10] => 11
+// [-1,0,25] => -1
+// [-4,-10,25,10] => -14
+// [0,200,10,25,15] => 10
+
+function minimalNumber(arr) {
+    let firstLoverNum 
+    for (let i = 0; i < arr.length; i++){
+        if (arr[i] <= arr[i+1]) {
+            firstLoverNum = arr[i]
+            console.log(firstLoverNum)
+        
+        }
+    }
+
+
+    
+}
+
+console.log(minimalNumber(arrNum))
