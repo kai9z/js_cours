@@ -321,20 +321,19 @@ let megaObject = {
 const companyFriends = []
 
 function findFriendWithSameID(companyList, friendList) {
-    for (i in friendList.friends) {
-        const friends = friendList.friends[i];
-        const friendsNames = friends.name;
-        const friendsIds = friends.id
+    
+    friendList.friends.forEach(function (elem) {
+        const friendsNames = elem.name
+        const friendsIds = elem.id
 
         companyList.forEach(function (elem) {
             const companyIndex = elem.index;
             if (companyIndex == friendsIds) {
                 const companyName = elem.company;
-                return companyFriends.push({companyName, friendsNames})
-                
+                return companyFriends.push({companyName, friendsNames})             
             }
         })
-    }
+    })
     console.log(companyFriends);
 
 }
