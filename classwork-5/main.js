@@ -143,76 +143,84 @@
 // console.log(reversedString);
 // console.log(reversedString.join(''));
 
-let arr1 = [1, false, 2, 0, 3, null, 0, 4, 0, 25];
-let arr2 = [
-  "a",
-  0,
-  0,
-  "b",
-  null,
-  "c",
-  "d",
-  0,
-  1,
-  false,
-  0,
-  1,
-  0,
-  3,
-  [],
-  0,
-  1,
-  9,
-  0,
-  0,
-  {},
-  0,
-  0,
-  9
-];
-//console.log(arr1)
-function moveToZero(arr) {
-    let arrZero = [];
-    let arrNumo = [];
+// let arr1 = [1, false, 2, 0, 3, null, 0, 4, 0, 25];
+// let arr2 = [
+//   "a",
+//   0,
+//   0,
+//   "b",
+//   null,
+//   "c",
+//   "d",
+//   0,
+//   1,
+//   false,
+//   0,
+//   1,
+//   0,
+//   3,
+//   [],
+//   0,
+//   1,
+//   9,
+//   0,
+//   0,
+//   {},
+//   0,
+//   0,
+//   9
+// ];
+// //console.log(arr1)
+// function moveToZero(arr) {
+//     let arrZero = [];
+//     let arrNumo = [];
 
+//     for (let i = 0; i < arr.length; i++) {
+//         const elem = arr[i];
+        
+//         if (elem === 0) {
+//             arrZero.push(elem);
+//             //console.log(arrZero)
+//             continue
+//         }
+
+//         arrNumo.push(elem)
+//         //console.log(arrNumo)
+
+//     }
+
+//     return arrNumo.concat(arrZero)
+
+// }
+
+// console.log(moveToZero(arr1));
+
+// function capMe(arr) {
+//     for (let i = 0; i < arr.length; i++) {
+//         const elemWithLowerCase = arr[i].toLowerCase();
+//         const firstChar = elemWithLowerCase[0].toUpperCase();
+//         const fullName = firstChar + elemWithLowerCase.slice(1);
+//         console.log(fullName)
+//     }
+
+// }
+
+// capMe(["sosi pisos", 'SUP DUDE'])
+
+function random(arr) {
+    const lastElem = arr[arr.length - 1]
+    const firstElem = arr[0]
+    const step = (lastElem - firstElem) / arr.length;
+    console.log(step);
     for (let i = 0; i < arr.length; i++) {
         const elem = arr[i];
-        
-        if (elem === 0) {
-            arrZero.push(elem);
-            //console.log(arrZero)
-            continue
-        }
+        const nextElem = arr[i + 1];
 
-        arrNumo.push(elem)
-        //console.log(arrNumo)
-
-    }
-
-    return arrNumo.concat(arrZero)
-
-}
-
-console.log(moveToZero(arr1));
-let arrNum = [1, 30, 50, 100, 250, 350, 3]
-// 2. Верните сумму двух найменьших чисел в массиве
-// [10,20,30,1,31,11,10] => 11
-// [-1,0,25] => -1
-// [-4,-10,25,10] => -14
-// [0,200,10,25,15] => 10
-
-function minimalNumber(arr) {
-    let firstLoverNum 
-    for (let i = 0; i < arr.length; i++){
-        if (arr[i] <= arr[i+1]) {
-            firstLoverNum = arr[i]
-            console.log(firstLoverNum)
-        
+        if (elem + step != nextElem) {
+            return elem + step;
         }
     }
-
-
-    
 }
 
-console.log(minimalNumber(arrNum))
+random([1, 3, 5, 9]);
+
