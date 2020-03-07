@@ -318,25 +318,93 @@ let megaObject = {
 // console.log(companysName(listOfCompany));
 // console.log(arrayWithCompanyNames)
 
-const companyFriends = []
+// const companyFriends = []
 
-function findFriendWithSameID(companyList, friendList) {
+// function findFriendWithSameID(companyList, friendList) {
     
-    friendList.friends.forEach(function (elem) {
-        const friendsNames = elem.name
-        const friendsIds = elem.id
+//     friendList.friends.forEach(function (elem) {
+//         const friendsNames = elem.name
+//         const friendsIds = elem.id
 
-        companyList.forEach(function (elem) {
-            const companyIndex = elem.index;
-            if (companyIndex == friendsIds) {
-                const companyName = elem.company;
-                return companyFriends.push({companyName, friendsNames})             
-            }
-        })
-    })
-    console.log(companyFriends);
+//         companyList.forEach(function (elem) {
+//             const companyIndex = elem.index;
+//             if (companyIndex === friendsIds) {
+//                 const companyName = elem.company;
+//                 return companyFriends.push({companyName, friendsNames})             
+//             }
+//         })
+//     })
+//     console.log(companyFriends);
+// }
 
-}
+// findFriendWithSameID(listOfCompany, megaObject)
+// //1:20: p1 done
 
-findFriendWithSameID(listOfCompany, megaObject)
-//1:20: p1 done
+// // map
+// const arr = [1, 2, 3, 4, 5];
+// /*
+// console.log(arr.map(function(value) {
+//   return value * 2
+// }));
+// */
+
+// function test(qwer) {
+//   qi = qwer.map(function(elem) {
+//     return elem * 2
+//   })
+//   console.log(qi);
+// }
+
+// test(arr)
+
+// .filter
+
+// a = arr.filter(function(elem, index, arr) {
+//   return elem > 2
+// })
+// console.log(a)
+
+// const user = {
+//   english: 'B1',
+// };
+
+// const salaryArr = [
+//   {
+//     salary: 500,
+//     expectedEnglish: 'B1+'
+//   },
+//   {
+//     salary: 100,
+//     expectedEnglish: 'A1+'
+//   },
+//   {
+//     salary: 1500,
+//     expectedEnglish: 'C1+'
+//   }
+// ]
+
+// mySalary = salaryArr.filter(function(elem, index, arr) {
+//   if (elem.expectedEnglish > 'b1') {
+//     return elem
+//   }
+// })
+// console.log(mySalary)
+
+// arr.reduce(function (newValue, value, index, arr) {
+//   console.log('newValue:', newValue);
+//   console.log('index:', index)
+//   return newValue + 1;
+// }, 0);
+
+const arr = [5, 10, 20];
+
+console.log('REDUCE:', arr.reduce(function (newValue, value, index, arr) {
+  return newValue + value;
+}, 0));
+
+const arr2 = ['js', 'easy', 'for', 'life'];
+
+console.log('reduce2:', arr2.reduce(function(newValue, value, index, arr) {
+  return newValue + ' - ' + value;
+}));
+
