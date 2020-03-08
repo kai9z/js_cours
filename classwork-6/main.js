@@ -408,3 +408,125 @@ console.log('reduce2:', arr2.reduce(function(newValue, value, index, arr) {
   return newValue + ' - ' + value;
 }));
 
+//hw
+console.log('hw');
+
+/*
+* TASK 1
+* Посчитайте количество букв а, в передаваемом параметре
+*/
+let randomString = 'aaa b a w c';
+
+let user = {
+  name: 'Albina',
+};
+
+let javaScript = {
+  html: 'JavaScript',
+};
+
+function countLetterA(str) {
+  counter = 0;
+  if (typeof(str) !== 'object') {
+    for (i in str) {
+      const elem = str[i];
+      if (elem === 'a' || elem === 'A') {
+        counter++;
+      }
+    }
+  return counter;
+  } else {
+    for (i in str) {
+      elem = str[i];
+      for (j in elem) {
+        letter = elem[j];
+        if (letter === 'a' || letter === 'A') {
+          counter++;
+        }
+      }
+    }
+    return counter
+  }
+}
+
+console.log(countLetterA(randomString));
+console.log(countLetterA(user));
+console.log(countLetterA(javaScript));
+
+/*
+* TASK 2
+* Вам дано предложение, вам необходимо перевернуть каждое
+* слово в предложении в обратном порядке
+*/
+
+const randomString1 = 'You don\'t have to do anything special to begin using the DOM. Different browsers have different implementations of the DOM';
+
+function reverseEachWord(elem, check) {
+  // that will be our final reversed string
+  let stringulia = '';
+
+  // converting all wrods to separate arrays
+  const stingAsArray = elem.split(' ');
+  
+  for (i in stingAsArray) {
+    eachWord = stingAsArray[i];
+
+    //right now all words that was array will have all latters as arrays inside.
+    eachLetterAsArray = eachWord.split('');
+
+    //reversing words
+    reversedLetters = eachLetterAsArray.reverse()
+
+    for (j in reversedLetters) {
+      stringulia = stringulia + reversedLetters[j]
+    }
+    stringulia = stringulia + ' ';
+  }
+  /*
+  * TASK 3
+  * Добавьте в функцию reverseEachWord второй параметр,
+  * данный параметр булево, если true - тогда предложение так же
+  * переворачиваются в обратном порядке
+  */
+  if (check === true) {
+    let are = []
+    are = stringulia.split('.').reverse()
+    stringulia = are[0] + are[1]
+    return stringulia
+  } else {
+    return stringulia
+  }
+}
+console.log(reverseEachWord(randomString1, true))
+
+
+
+
+ /* TASK 3
+ * Посчитайте сколько одинаковых слов в предложении.
+ * Функция должна возвращать объект у которого свойства
+ * это повторяющиеся слово,
+ * а значение это количество повторений
+ * */
+
+ /*
+  TASK 4
+ // Функция принимает массив у которого есть свойста _id и Company.
+ // верните объект, у которого ключ это _id, а значение Company
+ */
+
+ /*
+*
+* super2
+*
+* implement array method filter function
+*
+*
+* */
+
+
+
+
+
+
+
